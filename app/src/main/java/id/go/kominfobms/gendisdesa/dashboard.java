@@ -1,6 +1,5 @@
 package id.go.kominfobms.gendisdesa;
 
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -20,12 +19,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.widget.NestedScrollView;
 
-import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import java.util.Objects;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -81,19 +77,9 @@ public class dashboard extends AppCompatActivity {
     private void init() {
         initComponent();
         getBanner();
-        getLoket1();
-        getLoket4();
         getKontak();
 
-        Timer timer = new Timer();
-        timer.scheduleAtFixedRate(new TimerTask() {
-            @Override
-            public void run() {
-                Log.e("TAG", "runing get data loket  ");
-                getLoket1();
-                getLoket4();
-            }
-        }, 0, 10000);
+
     }
 
     private void getKontak() {
@@ -117,57 +103,10 @@ public class dashboard extends AppCompatActivity {
         layoutKontak.setOnClickListener(v -> dialogKontak.show());
     }
 
-    private void getLoket4() {
-        Api.createService(context, Simpkb.class)
-                .getLoket4()
-                .enqueue(new Callback<NoAntrianModel>() {
-                    @Override
-                    public void onResponse(Call<NoAntrianModel> call, Response<NoAntrianModel> response) {
-                        Log.e("TAG", "onResponse: " + new Gson().toJson(response.body()));
-                        assert response.body() != null;
-                        totalAntrian4.setText("Total : " + response.body().getTotal());
-                        if (response.body().getStatus() == 1) {
-                            tvAntrian4.setText(response.body().getData().getNoAntrian());
-                        } else {
-                            tvAntrian4.setText("-");
-                        }
-                    }
 
-                    @Override
-                    public void onFailure(Call<NoAntrianModel> call, Throwable t) {
-                        Log.e("TAG", "onFailure: " + new Gson().toJson(t.getMessage()));
-//                        Toast.makeText(context, "Terjadi kesalahan saat mengambil no Antrian : " + t.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                });
-    }
-
-    private void getLoket1() {
-        Api.createService(context, Simpkb.class)
-                .getLoket1()
-                .enqueue(new Callback<NoAntrianModel>() {
-                    @SuppressLint("SetTextI18n")
-                    @Override
-                    public void onResponse(Call<NoAntrianModel> call, Response<NoAntrianModel> response) {
-                        Log.e("TAG", "onResponse: " + new Gson().toJson(response.body()));
-                        assert response.body() != null;
-                        totalAntrian1.setText("Total : " + response.body().getTotal());
-                        if (response.body().getStatus() == 1) {
-                            tvAntrian1.setText(response.body().getData().getNoAntrian());
-                        } else {
-                            tvAntrian1.setText("-");
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<NoAntrianModel> call, Throwable t) {
-                        Log.e("TAG", "onFailure: " + new Gson().toJson(t.getMessage()));
-//                        Toast.makeText(context, "Terjadi kesalahan saat mengambil no Antrian : " + t.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                });
-    }
 
     private void getBanner() {
-        Api.createService(context, Simpkb.class)
+        Api.createService(context, Gendis.class)
                 .getBanner()
                 .enqueue(new Callback<BannerModel>() {
                     @Override

@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private WebView webView;
     private Toolbar toolbar;
     private Context context;
-    private String URL = "http://simpkb.banyumaskab.go.id/loginandroid";
+    private String URL = "http://gendisdesa.banyumaskab.go.id/login_android";
     private String TAG = "MainActivity :: ";
 
     @Override

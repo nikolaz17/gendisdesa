@@ -19,6 +19,6 @@ public class daftar_akun extends AppCompatActivity {
 
         webView.setWebViewClient(new WebViewClient());
 
-        webView.loadUrl("http://simpkb.banyumaskab.go.id/registrasiandroid");
+        webView.loadUrl("http://gendisdesa.banyumaskab.go.id/daftar_akunandroid");
     }
 }

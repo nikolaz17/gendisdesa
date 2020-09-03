@@ -23,7 +23,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class Api {
-    private static final String BASE_URL = "http://simpkb.banyumaskab.go.id/";
+    private static final String BASE_URL = "http://gendisdesa.banyumaskab.go.id/";
     private static final String DEFAULT_USERNAME_PASSWORD = "default";
 
     private static final OkHttpClient client = new OkHttpClient.Builder()

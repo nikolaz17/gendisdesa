@@ -28,14 +28,14 @@
 
                 <com.google.android.material.appbar.AppBarLayout
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="150dp"
                     android:background="@drawable/bg"
                     app:elevation="0dp">
 
                     <androidx.appcompat.widget.Toolbar
                         android:id="@+id/toolbar"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="20dp"
                         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                         app:contentInsetStartWithNavigation="0dp"
                         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
@@ -52,7 +52,7 @@
                             android:layout_width="210dp"
                             android:layout_height="54dp"
                             android:layout_marginBottom="30dp"
-                            android:background="@drawable/tulisan_kecil" />
+                            android:background="@drawable/tulisan_gendis" />
 
                         <ImageView
                             android:layout_width="60dp"
@@ -69,11 +69,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="-200dp"
+                    android:layout_marginTop="-60dp"
                     android:orientation="vertical"
                     android:paddingLeft="@dimen/spacing_large"
                     android:paddingRight="@dimen/spacing_large">
-
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
@@ -92,13 +91,14 @@
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:id="@+id/layoutBanner"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="320dp"
+                                android:background="@color/colorPrimaryDark">
 
                                 <ss.com.bannerslider.Slider
                                     android:id="@+id/banner_slider"
                                     android:layout_width="0dp"
                                     android:layout_height="0dp"
-                                    app:layout_constraintDimensionRatio="H,16:8"
+                                    app:layout_constraintDimensionRatio="W,8:8"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
@@ -112,24 +112,17 @@
 
                     </androidx.cardview.widget.CardView>
 
+
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/spacing_small" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/spacing_middle"
-                        android:layout_marginBottom="@dimen/spacing_medium"
-                        android:gravity="center"
-                        android:text="ANTRIAN LOKET HARI INI"
-                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
-                        android:textColor="@color/putih"
-                        app:fontFamily="sans-serif-medium" />
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:visibility="gone"
                         app:cardCornerRadius="6dp"
                         app:cardElevation="2dp"
                         app:cardUseCompatPadding="true">
@@ -156,7 +149,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="LOKET 1"
+                                    android:text="GENDIS DESA"
                                     android:textColor="@color/putih"
                                     android:textSize="22dp" />
 
@@ -164,7 +157,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="LOKET PENDAFTARAN"
+                                    android:text="GENDIS DESA"
                                     android:textColor="@color/putih"
                                     android:textSize="13dp" />
 
@@ -277,7 +270,7 @@
                         android:gravity="center"
                         android:text="MENU APLIKASI"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
-                        android:textColor="@color/grey_5"
+                        android:textColor="@color/white"
                         app:fontFamily="sans-serif-medium" />
 
                     <LinearLayout
@@ -316,7 +309,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="LOGIN APLIKASI"
+                                        android:text="MASUK APLIKASI"
                                         android:textColor="@color/black"
                                         android:textSize="15dp"
                                         app:fontFamily="sans-serif-medium" />

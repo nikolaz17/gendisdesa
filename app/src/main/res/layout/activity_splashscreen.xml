@@ -15,7 +15,7 @@
         <pl.droidsonroids.gif.GifImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/intro_simpkb"
+            android:src="@drawable/intro_dinsos"
             android:layout_centerInParent="true"/>
 
 
@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SIM PKB versi 1"
+            android:text="GENDIS DESA versi 1"
             android:gravity="center"
             android:padding="@dimen/dp_8"
             android:layout_alignParentBottom="true"
