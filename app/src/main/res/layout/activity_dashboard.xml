@@ -203,7 +203,7 @@
                         android:id="@+id/layoutInfoLaporan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/blue_50"
+                        android:background="@color/yellow_300"
                         android:orientation="vertical"
                         android:paddingStart="@dimen/dp_16"
                         android:paddingEnd="@dimen/dp_16"
