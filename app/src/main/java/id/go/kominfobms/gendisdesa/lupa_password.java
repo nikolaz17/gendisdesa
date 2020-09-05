@@ -31,6 +31,6 @@ public class lupa_password extends AppCompatActivity {
 
         webView.setWebViewClient(new WebViewClient());
 
-        webView.loadUrl("http://simpkb.banyumaskab.go.id/passwordandroid/forgot");
+        webView.loadUrl("http://gendisdesa.banyumaskab.go.id/lupa_passwordandroid");
     }
 }

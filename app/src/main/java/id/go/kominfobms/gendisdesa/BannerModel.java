@@ -19,6 +19,9 @@ public class BannerModel {
     @SerializedName("data")
     private List<String> data;
 
+    @SerializedName("total")
+    private int total;
+
     public int getStatus() {
         return status;
     }
@@ -42,4 +45,5 @@ public class BannerModel {
     public void setData(List<String> data) {
         this.data = data;
     }
+
 }

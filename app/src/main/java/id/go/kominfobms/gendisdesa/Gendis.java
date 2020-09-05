@@ -7,5 +7,4 @@ public interface Gendis {
     @GET("api")
     Call<BannerModel> getBanner();
 
-
 }

@@ -44,8 +44,8 @@ public class dashboard extends AppCompatActivity {
     NestedScrollView nestedScrollView;
     @BindView(R.id.layoutLupaPass)
     LinearLayout layoutLupaPass;
-    @BindView(R.id.layoutInputKode)
-    LinearLayout layoutInputKode;
+    @BindView(R.id.layoutCariData)
+    LinearLayout layoutCariData;
     @BindView(R.id.layoutInputUlangKode)
     LinearLayout layoutInputUlangKode;
     @BindView(R.id.layoutLogin)
@@ -56,12 +56,7 @@ public class dashboard extends AppCompatActivity {
     ConstraintLayout layoutBanner;
     @BindView(R.id.tvAntrian1)
     TextView tvAntrian1;
-    @BindView(R.id.tvAntrian4)
-    TextView tvAntrian4;
-    @BindView(R.id.totalAntrian1)
-    TextView totalAntrian1;
-    @BindView(R.id.totalAntrian4)
-    TextView totalAntrian4;
+
     @BindView(R.id.layoutKontak)
     LinearLayout layoutKontak;
     private Dialog dialogKontak;
@@ -96,7 +91,7 @@ public class dashboard extends AppCompatActivity {
         btnDialogClose.setOnClickListener(v -> dialogKontak.dismiss());
 
         Picasso.get()
-                .load("http://simpkb.banyumaskab.go.id/themes/booking/asset/img/dinashub1.png")
+                .load("http://gendisdesa.banyumaskab.go.id/template/user2/images/alamat_dinsos.png")
                 .placeholder(R.drawable.icon_login)
                 .into(imageDialog);
 
@@ -151,7 +146,7 @@ public class dashboard extends AppCompatActivity {
             startActivity(intent);
         });
 
-        layoutInputKode.setOnClickListener(v -> {
+        layoutCariData.setOnClickListener(v -> {
             Intent intent = new Intent(context, input_kode.class);
             startActivity(intent);
         });

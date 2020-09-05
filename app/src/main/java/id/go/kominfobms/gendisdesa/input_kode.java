@@ -31,6 +31,6 @@ public class input_kode extends AppCompatActivity {
 
         webView.setWebViewClient(new WebViewClient());
 
-        webView.loadUrl("http://simpkb.banyumaskab.go.id/verifikasiandroid/status");
+        webView.loadUrl("http://gendisdesa.banyumaskab.go.id/cari_dataandroid");
     }
 }
