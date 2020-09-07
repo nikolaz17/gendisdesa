@@ -3,6 +3,7 @@ package id.go.kominfobms.gendisdesa;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +26,13 @@ import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import id.go.kominfobms.gendisdesa.Activity.daftar_akun;
+import id.go.kominfobms.gendisdesa.Adapter.BannerAdapter;
+import id.go.kominfobms.gendisdesa.Model.BannerModel;
+import id.go.kominfobms.gendisdesa.Model.DifabelModel;
+import id.go.kominfobms.gendisdesa.Service.Api;
+import id.go.kominfobms.gendisdesa.Service.Gendis;
+import id.go.kominfobms.gendisdesa.Service.PicassoImageLoadingService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -59,6 +67,18 @@ public class dashboard extends AppCompatActivity {
 
     @BindView(R.id.layoutKontak)
     LinearLayout layoutKontak;
+    @BindView(R.id.totalAntrian1)
+    TextView totalAntrian1;
+    @BindView(R.id.tvDifabelTerdaftar)
+    TextView tvDifabelTerdaftar;
+    @BindView(R.id.tvKeteranganLaporSekarang)
+    TextView tvKeteranganLaporSekarang;
+    @BindView(R.id.tvDifabelTerverifikasi)
+    TextView tvDifabelTerverifikasi;
+    @BindView(R.id.tvKeteranganLaporSelanjutnya)
+    TextView tvKeteranganLaporSelanjutnya;
+    @BindView(R.id.layoutInfoLaporan)
+    LinearLayout layoutInfoLaporan;
     private Dialog dialogKontak;
 
     @Override
@@ -73,8 +93,52 @@ public class dashboard extends AppCompatActivity {
         initComponent();
         getBanner();
         getKontak();
+        getDifabelTerverifikasi();
+        getDifabelTerdaftar();
+    }
 
+    private void getDifabelTerdaftar() {
+        Api.createService(context, Gendis.class)
+                .getDifabelTerdaftar()
+                .enqueue(new Callback<DifabelModel>() {
+                    @Override
+                    public void onResponse(Call<DifabelModel> call, Response<DifabelModel> response) {
+                        if (response.isSuccessful()) {
+                            if((response.body() != null ? response.body().getStatus() : 0) == 1){
+                                tvDifabelTerdaftar.setText(String.valueOf(response.body().getTotal()));
+                            }
+                        } else {
+                            Toast.makeText(context, "Terjadi Kesalahan", Toast.LENGTH_LONG).show();
+                        }
+                    }
 
+                    @Override
+                    public void onFailure(Call<DifabelModel> call, Throwable t) {
+                        Toast.makeText(context, t.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                });
+    }
+
+    private void getDifabelTerverifikasi() {
+        Api.createService(context, Gendis.class)
+                .getDifabelVerifikasi()
+                .enqueue(new Callback<DifabelModel>() {
+                    @Override
+                    public void onResponse(Call<DifabelModel> call, Response<DifabelModel> response) {
+                        if (response.isSuccessful()) {
+                            if((response.body() != null ? response.body().getStatus() : 0) == 1){
+                                tvDifabelTerverifikasi.setText(String.valueOf(response.body().getTotal()));
+                            }
+                        } else {
+                            Toast.makeText(context, "Terjadi Kesalahan", Toast.LENGTH_LONG).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<DifabelModel> call, Throwable t) {
+                        Toast.makeText(context, t.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                });
     }
 
     private void getKontak() {
@@ -83,7 +147,7 @@ public class dashboard extends AppCompatActivity {
         dialogKontak.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
         View view = getLayoutInflater().inflate(R.layout.dialog_image, null);
         dialogKontak.setContentView(view);
-        Objects.requireNonNull(dialogKontak.getWindow()).setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        Objects.requireNonNull(dialogKontak.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialogKontak.setCancelable(true);
 
         ImageButton btnDialogClose = view.findViewById(R.id.btnDialogClose);
@@ -97,7 +161,6 @@ public class dashboard extends AppCompatActivity {
 
         layoutKontak.setOnClickListener(v -> dialogKontak.show());
     }
-
 
 
     private void getBanner() {

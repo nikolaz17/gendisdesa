@@ -17,7 +17,7 @@
         <activity android:name="id.go.kominfobms.gendisdesa.input_ulang_kode"></activity>
         <activity android:name="id.go.kominfobms.gendisdesa.input_kode" />
         <activity android:name="id.go.kominfobms.gendisdesa.lupa_password" />
-        <activity android:name="id.go.kominfobms.gendisdesa.daftar_akun" />
+        <activity android:name="id.go.kominfobms.gendisdesa.Activity.daftar_akun" />
         <activity android:name="id.go.kominfobms.gendisdesa.splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

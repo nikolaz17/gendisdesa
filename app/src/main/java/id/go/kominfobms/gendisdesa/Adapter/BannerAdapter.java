@@ -1,5 +1,6 @@
-package id.go.kominfobms.gendisdesa;
+package id.go.kominfobms.gendisdesa.Adapter;
 
+import id.go.kominfobms.gendisdesa.Model.BannerModel;
 import ss.com.bannerslider.adapters.SliderAdapter;
 import ss.com.bannerslider.viewholder.ImageSlideViewHolder;
 
