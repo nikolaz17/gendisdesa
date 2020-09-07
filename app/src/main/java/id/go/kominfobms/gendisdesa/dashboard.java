@@ -106,6 +106,8 @@ public class dashboard extends AppCompatActivity {
                         if (response.isSuccessful()) {
                             if((response.body() != null ? response.body().getStatus() : 0) == 1){
                                 tvDifabelTerdaftar.setText(String.valueOf(response.body().getTotal()));
+                            } else {
+                                tvDifabelTerdaftar.setText("0");
                             }
                         } else {
                             Toast.makeText(context, "Terjadi Kesalahan", Toast.LENGTH_LONG).show();
@@ -128,6 +130,8 @@ public class dashboard extends AppCompatActivity {
                         if (response.isSuccessful()) {
                             if((response.body() != null ? response.body().getStatus() : 0) == 1){
                                 tvDifabelTerverifikasi.setText(String.valueOf(response.body().getTotal()));
+                            } else {
+                                tvDifabelTerverifikasi.setText("0");
                             }
                         } else {
                             Toast.makeText(context, "Terjadi Kesalahan", Toast.LENGTH_LONG).show();
