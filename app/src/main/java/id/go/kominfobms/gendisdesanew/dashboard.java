@@ -1,4 +1,4 @@
-package id.go.kominfobms.gendisdesa;
+package id.go.kominfobms.gendisdesanew;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -26,13 +26,13 @@ import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import id.go.kominfobms.gendisdesa.Activity.daftar_akun;
-import id.go.kominfobms.gendisdesa.Adapter.BannerAdapter;
-import id.go.kominfobms.gendisdesa.Model.BannerModel;
-import id.go.kominfobms.gendisdesa.Model.DifabelModel;
-import id.go.kominfobms.gendisdesa.Service.Api;
-import id.go.kominfobms.gendisdesa.Service.Gendis;
-import id.go.kominfobms.gendisdesa.Service.PicassoImageLoadingService;
+import id.go.kominfobms.gendisdesanew.Activity.daftar_akun;
+import id.go.kominfobms.gendisdesanew.Adapter.BannerAdapter;
+import id.go.kominfobms.gendisdesanew.Model.BannerModel;
+import id.go.kominfobms.gendisdesanew.Model.DifabelModel;
+import id.go.kominfobms.gendisdesanew.Service.Api;
+import id.go.kominfobms.gendisdesanew.Service.Gendis;
+import id.go.kominfobms.gendisdesanew.Service.PicassoImageLoadingService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

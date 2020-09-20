@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "id.go.kominfobms.gendisdesa"
+        applicationId "id.go.kominfobms.gendisdesanew"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 2

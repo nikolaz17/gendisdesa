@@ -7,7 +7,7 @@
     android:background="@color/colorPrimary"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="id.go.kominfobms.gendisdesa.dashboard">
+    tools:context="id.go.kominfobms.gendisdesanew.dashboard">
 
     <RelativeLayout
         android:layout_width="match_parent"

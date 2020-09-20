@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.go.kominfobms.gendisdesa.input_ulang_kode">
+    tools:context="id.go.kominfobms.gendisdesanew.input_ulang_kode">
 
     <RelativeLayout
         android:layout_width="match_parent"

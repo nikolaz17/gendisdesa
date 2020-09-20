@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.go.kominfobms.gendisdesa.Activity.daftar_akun">
+    tools:context="id.go.kominfobms.gendisdesanew.Activity.daftar_akun">
 
     <RelativeLayout
         android:layout_width="match_parent"

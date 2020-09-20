@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="id.go.kominfobms.gendisdesa">
+    package="id.go.kominfobms.gendisdesanew">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,19 +14,19 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name="id.go.kominfobms.gendisdesa.input_ulang_kode"></activity>
-        <activity android:name="id.go.kominfobms.gendisdesa.input_kode" />
-        <activity android:name="id.go.kominfobms.gendisdesa.lupa_password" />
-        <activity android:name="id.go.kominfobms.gendisdesa.Activity.daftar_akun" />
-        <activity android:name="id.go.kominfobms.gendisdesa.splashscreen">
+        <activity android:name="id.go.kominfobms.gendisdesanew.input_ulang_kode"></activity>
+        <activity android:name="id.go.kominfobms.gendisdesanew.input_kode" />
+        <activity android:name="id.go.kominfobms.gendisdesanew.lupa_password" />
+        <activity android:name="id.go.kominfobms.gendisdesanew.Activity.daftar_akun" />
+        <activity android:name="id.go.kominfobms.gendisdesanew.splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="id.go.kominfobms.gendisdesa.dashboard" />
-        <activity android:name="id.go.kominfobms.gendisdesa.MainActivity" />
+        <activity android:name="id.go.kominfobms.gendisdesanew.dashboard" />
+        <activity android:name="id.go.kominfobms.gendisdesanew.MainActivity" />
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package id.go.kominfobms.gendisdesa;
+package id.go.kominfobms.gendisdesanew;
 
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;

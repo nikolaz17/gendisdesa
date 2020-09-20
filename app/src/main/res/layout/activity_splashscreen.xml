@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="id.go.kominfobms.gendisdesa.splashscreen">
+    tools:context="id.go.kominfobms.gendisdesanew.splashscreen">
 
     <RelativeLayout
         android:layout_width="match_parent"

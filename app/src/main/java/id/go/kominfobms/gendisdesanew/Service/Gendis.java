@@ -1,7 +1,7 @@
-package id.go.kominfobms.gendisdesa.Service;
+package id.go.kominfobms.gendisdesanew.Service;
 
-import id.go.kominfobms.gendisdesa.Model.BannerModel;
-import id.go.kominfobms.gendisdesa.Model.DifabelModel;
+import id.go.kominfobms.gendisdesanew.Model.BannerModel;
+import id.go.kominfobms.gendisdesanew.Model.DifabelModel;
 import retrofit2.Call;
 import retrofit2.http.GET;
 

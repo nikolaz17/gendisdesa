@@ -1,4 +1,4 @@
-package id.go.kominfobms.gendisdesa.Service;
+package id.go.kominfobms.gendisdesanew.Service;
 
 import android.content.Context;
 import android.widget.ImageView;

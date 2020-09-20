@@ -1,4 +1,4 @@
-package id.go.kominfobms.gendisdesa.Service;
+package id.go.kominfobms.gendisdesanew.Service;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -22,8 +22,8 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
-public class Api {
-    private static final String BASE_URL = "http://gendisdesa.banyumaskab.go.id/";
+public class Api2 {
+    private static final String BASE_URL = "http://103.105.190.34/";
     private static final String DEFAULT_USERNAME_PASSWORD = "default";
 
     private static final OkHttpClient client = new OkHttpClient.Builder()
@@ -65,7 +65,7 @@ public class Api {
 
     private static <S> S createService(Context context, Class<S> serviceClass, final String authToken) {
         if (!TextUtils.isEmpty(authToken)) {
-            AuthenticationInterceptor interceptor = new AuthenticationInterceptor(context, authToken);
+            AuthenticationInterceptor2 interceptor = new AuthenticationInterceptor2(context, authToken);
             if (!httpClient.interceptors().contains(interceptor)) {
                 httpClient.addInterceptor(interceptor);
                 builder.client(httpClient.build());
@@ -90,7 +90,7 @@ public class Api {
 
     private static <S> S createService(Class<S> serviceClass, final String authToken) {
         if (!TextUtils.isEmpty(authToken)) {
-            AuthenticationInterceptor interceptor = new AuthenticationInterceptor(authToken);
+            AuthenticationInterceptor2 interceptor = new AuthenticationInterceptor2(authToken);
             if (!httpClient.interceptors().contains(interceptor)) {
                 httpClient.addInterceptor(interceptor);
                 builder.client(httpClient.build());
@@ -101,15 +101,15 @@ public class Api {
     }
 }
 
-class AuthenticationInterceptor implements Interceptor {
+class AuthenticationInterceptor2 implements Interceptor {
     private Context context;
     private String authToken;
 
-    AuthenticationInterceptor(String token) {
+    AuthenticationInterceptor2(String token) {
         this.authToken = token;
     }
 
-    AuthenticationInterceptor(Context context, String authToken) {
+    AuthenticationInterceptor2(Context context, String authToken) {
         this.context = context;
         this.authToken = authToken;
     }

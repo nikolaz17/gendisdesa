@@ -1,4 +1,4 @@
-package id.go.kominfobms.gendisdesa.Model;
+package id.go.kominfobms.gendisdesanew.Model;
 
 import com.google.gson.annotations.SerializedName;
 

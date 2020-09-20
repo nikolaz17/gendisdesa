@@ -1,4 +1,4 @@
-package id.go.kominfobms.gendisdesa.Activity;
+package id.go.kominfobms.gendisdesanew.Activity;
 
 import android.os.Bundle;
 import android.webkit.WebView;
@@ -6,7 +6,7 @@ import android.webkit.WebViewClient;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import id.go.kominfobms.gendisdesa.R;
+import id.go.kominfobms.gendisdesanew.R;
 
 public class daftar_akun extends AppCompatActivity {
 
